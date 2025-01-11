@@ -1,0 +1,48 @@
+<!-- pedidos/templates/pedidos/listar_pedidos.html -->
+{% extends "admin.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Lista de Pedidos</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Teléfono</th>
+                <th>Cumpleaños</th>
+                <th>Cantidad de Paquetes</th>
+                <th>Fecha de Entrega</th>
+                <th>Vendedor</th>
+                <th>Método de Pago</th>
+                <th>Pagado</th>
+                <th>Marcar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pedido in pedidos %}
+            <tr>
+                <td>{{ pedido.nombre_cliente }}</td>
+                <td>{{ pedido.telefono }}</td>
+                <td>{{ pedido.fecha_cumpleanos }}</td>
+                <td>{{ pedido.cantidad_paquetes }}</td>
+                <td>{{ pedido.fecha_entrega }}</td>
+                <td>{{ pedido.nombre_vendedor }}</td>
+                <td>{{ pedido.get_metodo_pago_display }}</td>
+                <td>{{ pedido.pagado|yesno:"Sí,No" }}</td>
+                <td>
+                    <a href="{% url 'pedidos:marcar_pagado' pedido.id %}" class="btn btn-success btn-sm">
+                        Marcar Pagado
+                    </a>
+                </td>
+                <td>
+                    <a href="{% url 'pedidos:eliminar_pedido' pedido.id %}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este pedido?');">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

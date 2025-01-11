@@ -1,0 +1,14 @@
+*--------------------------------*
+para iniciar servidor ngrok
+ngrok http 8000
+
+
+
+
+
+
+*---------------------------------*
+activo el entorno virtual
+
+para iniciar servidor django
+python manage.py runserver

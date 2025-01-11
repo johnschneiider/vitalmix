@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+
+/* Header Styles */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #009f3b;
+    font-size: 24px;
+}
+
+/* Form Container */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #009f3b;
+    box-shadow: 0 0 5px rgba(0, 159, 59, 0.4);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #009f3b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #007f30;
+}
+
+/* Messages Styles */
+.ul {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    list-style: none;
+    background-color: #ffe9e9;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+}
+
+.ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .ul li {
+        font-size: 13px;
+    }
+}
+</style>
+
+<h2>Cambiar Contraseña</h2>
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="nueva_password">Nueva Contraseña:</label>
+        <input type="password" name="nueva_password" class="form-control" id="nueva_password" required>
+    </div>
+    <div class="form-group">
+        <label for="confirmar_password">Confirmar Contraseña:</label>
+        <input type="password" name="confirmar_password" class="form-control" id="confirmar_password" required>
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #009f3b; border: none;">Guardar Contraseña</button>
+    {% for message in messages %}
+    <ul class="ul">
+        <li>{{ message }}</li>
+    </ul>
+    {% endfor %}
+</form>
+
+{% if messages %}
+
+{% endif %}
+{% endblock %}

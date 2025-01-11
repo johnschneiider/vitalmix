@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+form label {
+    display: block; /* Asegura que cada label esté en su propia línea */
+    font-size: 14px;
+    margin-bottom: 8px; /* Espaciado entre el label y el siguiente elemento */
+    color: #333;
+}
+
+form select {
+    display: block; /* Asegura que el select esté en su propia línea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 16px; /* Espaciado entre los elementos del formulario */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+form select:focus {
+    outline: none;
+    border-color: #009f3b;
+    box-shadow: 0 0 5px rgba(0, 159, 59, 0.4);
+}
+
+form button {
+    width: 100%; /* Botón alineado al formulario */
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #009f3b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #007f30;
+}
+
+/* Message Styles */
+.messages {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #e7fbe9;
+    color: #009f3b;
+    border: 1px solid #009f3b;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Clear Floats */
+form label + select {
+    clear: both; /* Limpia flotantes entre label y select */
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    form button {
+        font-size: 14px;
+    }
+
+    form select {
+        font-size: 13px;
+    }
+
+    .messages {
+        font-size: 13px;
+    }
+}
+</style>
+<form method="POST">
+    {% csrf_token %}
+    
+    <label for="respuesta1" style="display: block;">¿Cuál es tu fecha de nacimiento?</label>
+    <select id="respuesta1" name="respuesta1" style="display: block;">
+        {% for fecha in fechas_random %}
+            <option value="{{ fecha }}">{{ fecha }}</option>
+        {% endfor %}
+    </select>
+<br><br><br>
+    <label for="respuesta2" style="display: block;">¿En qué barrio vives?</label>
+    <select id="respuesta2" name="respuesta2" style="display: block;">
+        {% for barrio in barrios_random %}
+            <option value="{{ barrio }}">{{ barrio }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Verificar</button>
+
+    {% for message in messages %}
+        <p class="messages">{{ message }}</p>
+    {% endfor %}
+</form>
+
+
+
+<div>
+    <br><br><br>
+</div>
+{% endblock %}

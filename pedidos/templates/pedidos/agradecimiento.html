@@ -1,0 +1,44 @@
+<!-- compras/templates/compras/agradecimiento.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <div class="thank-you-container">
+        <h2>¡Gracias por tu pedido, {{ nombre_cliente }}!</h2>
+        <p>Un asesor se contactará contigo el día de la entrega.</p>
+        <a href="{% url 'inicio' %}" class="btn btn-primary mt-4" style="background-color: #00662e; color: #f8f9fa; border-color: #00662e;">Volver al Inicio</a>
+    </div>
+    <h1>¡Gracias por tu pedido, {{ nombre_cliente }}!</h1>
+        {% if pedido.resultado_ruleta %}
+            <p>Tu premio es: {{ pedido.resultado_ruleta.resultado }}</p>
+        {% else %}
+            <p>No se realizó un giro de la ruleta.</p>
+        {% endif %}
+
+    <br><br><br><br><br>
+</div>
+
+<style>
+/* Thank You Page Styles */
+.thank-you-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+}
+
+.thank-you-container h2 {
+    color: #00662e;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.thank-you-container p {
+    font-size: 1rem;
+    color: #495057;
+}
+</style>
+{% endblock %}

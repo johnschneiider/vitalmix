@@ -1,0 +1,185 @@
+<!-- compras/templates/compras/registrar_compra.html -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/roulette.css' %}">
+<style>
+    /* General container for the form */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+/* Form title */
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #00662e; /* Primary color */
+    font-weight: bold;
+}
+
+/* Form group style */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Input fields */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+/* Input fields focus effect */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #00662e;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 102, 46, 0.4);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #00662e;
+    border-color: #00662e;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #004c20;
+    border-color: #004c20;
+}
+
+.btn-secondary {
+    background-color: #ffc600;
+    border-color: #ffc600;
+    color: #212529;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #dba900;
+    border-color: #dba900;
+}
+
+/* Adjust the button margin for spacing */
+.btn-block {
+    width: 100%;
+}
+
+/* Adjust link inside the form */
+.form-container a {
+    text-align: center;
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #00662e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+</style>
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Registrar Pedido</h2>
+            <form method="post" action="" id="pedidoForm">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ form.nombre_cliente.label_tag }} 
+                    {{ form.nombre_cliente }}
+                </div>
+                <div class="form-group">
+                    {{ form.telefono.label_tag }} 
+                    {{ form.telefono }}
+                </div>
+                <div class="form-group">
+                    {{ form.fecha_cumpleanos.label_tag }} 
+                    {{ form.fecha_cumpleanos }}
+                </div>
+                <div class="form-group">
+                    {{ form.cantidad_paquetes.label_tag }} 
+                    {{ form.cantidad_paquetes }}
+                </div>
+                <div class="form-group">
+                    {{ form.producto.label_tag }} 
+                    {{ form.producto }}
+                </div>
+                <div class="form-group">
+                    {{ form.fecha_entrega.label_tag }} 
+                    {{ form.fecha_entrega }}
+                </div>
+                <div class="form-group" style="display: none;">
+                    {{ form.nombre_vendedor.label_tag }} 
+                    {{ form.nombre_vendedor }}
+                </div>
+                <div class="form-group" style="display: none;">
+                    {{ form.metodo_pago.label_tag }} 
+                    {{ form.metodo_pago }}
+                </div>
+                <button type="button" id="hacerPedidoBtn" class="btn btn-primary btn-block mt-4">Hacer pedido</button>
+            </form>
+            <a href="{% url 'pedidos:listar_pedidos' %}" style="display: none;" class="btn btn-secondary btn-block mt-3">Volver a la Lista de Pedidos</a>
+        </div>
+    </div>
+
+<!-- Modal de la Ruleta -->
+<div class="modal fade" id="ruletaModal" tabindex="-1" aria-labelledby="ruletaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+            <div class="modal-header">
+                <h5 class="modal-title w-100" id="ruletaModalLabel">¡Gira la ruleta!</h5>
+            </div>
+            <div class="modal-body">
+                <div class="ruleta-container">
+                    <img id="ruleta" src="{% static 'img/ruleta.png' %}" alt="Ruleta" class="ruleta" />
+                    <div class="indicador"></div>
+                </div>
+                <p id="resultado" class="mt-3" style="display:none; font-size:1.5rem; font-weight: bold;"></p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" id="btnGirar">¡Gira la ruleta!</button>
+                <button type="button" class="btn btn-success" id="cerrarModal" style="display:none;" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+    <script src="{% static 'js/roulette.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    {% endblock %}

@@ -1,0 +1,19 @@
+.firework-particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: firework 2s ease-out forwards;
+  }
+
+  @keyframes firework {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }

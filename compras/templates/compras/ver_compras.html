@@ -1,0 +1,32 @@
+<!-- compras/templates/compras/ver_compras.html -->
+{% extends "admin.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Historial de Compras</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Ingrediente</th>
+                <th>Cantidad (libras)</th>
+                <th>Precio (COP)</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for compra in compras %}
+            <tr>
+                <td>{{ compra.nombre_ingrediente }}</td>
+                <td>{{ compra.cantidad_libras }}</td>
+                <td>${{ compra.precio }}</td>
+                <td>{{ compra.fecha_compra }}</td>
+                <td>
+                    <a href="{% url 'compras:editar_compra' compra.id %}" class="btn btn-warning btn-sm">Editar</a>
+                    <a href="{% url 'compras:eliminar_compra' compra.id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

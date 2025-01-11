@@ -1,0 +1,25 @@
+@keyframes attention {
+    0%, 100% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.2) rotate(15deg);
+    }
+    50% {
+      transform: scale(1.2) rotate(-15deg);
+    }
+    85% {
+      transform: scale(1.2) rotate(15deg);
+    }
+  }
+  
+  .animated-button {
+    animation: attention 1s ease-in-out;
+    animation-iteration-count: 1; /* La animación ocurre una sola vez */
+  }
+  
+  /* Evitar que la animación se reinicie al pasar el mouse */
+  .animated-button:hover {
+    animation: none;
+  }
+  

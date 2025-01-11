@@ -1,0 +1,81 @@
+/* Código CSS extraído del archivo */
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
+/* Resto del código CSS */
+/* Código CSS extraído del archivo */
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Work+Sans:400,700,900");
+body {
+  overflow: hidden;
+}
+
+.roulette {
+  font-family: 'Work Sans', sans-serif;
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+}
+
+.roulette .shadow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0.3em 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.roulette .button {
+  width: 10em;
+  height: 10em;
+  line-height: 10em;
+  top: 50%;
+  left: 50%;
+  margin-left: -5em;
+  margin-top: -5em;
+  font-weight: 800;
+  z-index: 998;
+  position: absolute;
+  background: #FFF;
+  border: none;
+  border-radius: 100%;
+  color: #999;
+  outline: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  box-shadow: 0 0.4em 0 rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: transform 0.15s;
+}
+
+.roulette .button span {
+  font-size: 1.6em;
+  letter-spacing: -0.05em;
+}
+
+
+/* Contenedor padre */
+.ruleta-container {
+    position: relative; /* Necesario para que el indicador se posicione correctamente */
+    display: inline-block;
+}
+
+/* Indicador */
+.indicador {
+    position: absolute;
+    top: 50%; /* Lo centra verticalmente */
+    right: 0; /* A 5 píxeles del borde derecho */
+    transform: translateY(-50%); /* Ajuste para centrar verticalmente */
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent; /* Lado superior del triángulo */
+    border-bottom: 15px solid transparent; /* Lado inferior del triángulo */
+    border-right: 30px solid rgb(255, 213, 0); /* Punta del indicador hacia la izquierda */
+    z-index: 10; /* Asegura que esté por encima de la ruleta */
+}

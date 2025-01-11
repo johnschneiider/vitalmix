@@ -1,0 +1,35 @@
+.cinta {
+    width: 100%;
+    height: 30px;
+    margin: 0 0 25px 0;
+    overflow: hidden;
+    position: relative;
+    background-color: #009f3b; /* Color de fondo de la cinta */
+    display: flex;
+    align-items: center; /* Centrar verticalmente los iconos */
+}
+
+.iconos {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    animation: deslizar 50s linear infinite;
+}
+
+.iconos i {
+    font-size: 20px; /* Tamaño más pequeño para los iconos */
+    color: white; /* Color de los iconos */
+    margin: 0 20px; /* Ajustar la separación entre los iconos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes deslizar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

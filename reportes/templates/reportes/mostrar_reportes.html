@@ -1,0 +1,165 @@
+{% extends "admin.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Reportes</h2>
+
+    <!-- Clientes más frecuentes -->
+    <h3>Clientes Más Frecuentes</h3>
+    <div style="width: 100%; max-width: 600px;">
+        <canvas id="clientesFrecuentes"></canvas>
+    </div>
+
+    <!-- Ventas por vendedor y por mes -->
+    <h3>Ventas por Vendedor y Mes</h3>
+    <div style="width: 100%; max-width: 600px;">
+        <canvas id="ventasPorVendedor"></canvas>
+    </div>
+
+    <!-- Clientes que No Han Pagado por Mes -->
+    <h3>Clientes que No Han Pagado por Mes</h3>
+    <div style="width: 100%; max-width: 600px;">
+        <canvas id="clientesNoPagadosPorMes"></canvas>
+    </div>
+
+    <!-- Costos de Ingredientes por Mes -->
+    <h3>Costos de Ingredientes por Mes</h3>
+    <div style="width: 100%; max-width: 600px;">
+        <canvas id="costosIngredientes"></canvas>
+    </div>
+
+    <!-- Cantidad de Libras Compradas por Mes -->
+    <h3>Cantidad de Libras Compradas por Mes</h3>
+    <div style="width: 100%; max-width: 600px;">
+        <canvas id="librasCompradas"></canvas>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Gráfico de Clientes Más Frecuentes
+    const ctxFrecuentes = document.getElementById('clientesFrecuentes').getContext('2d');
+    const clientesFrecuentesChart = new Chart(ctxFrecuentes, {
+        type: 'bar',
+        data: {
+            labels: {{ nombres_clientes|safe }},
+            datasets: [{
+                label: 'Total de Pedidos',
+                data: {{ total_pedidos_clientes|safe }},
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Gráfico de Ventas por Vendedor
+    const ctxVentas = document.getElementById('ventasPorVendedor').getContext('2d');
+    const ventasPorVendedorChart = new Chart(ctxVentas, {
+        type: 'bar',
+        data: {
+            labels: {{ meses_ventas|safe }},
+            datasets: Object.keys({{ total_ventas_vendedores|safe }}).map(vendedor => ({
+                label: vendedor,
+                data: {{ total_ventas_vendedores|safe }}[vendedor],
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }))
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Gráfico de Clientes que No Han Pagado por Mes
+    const ctxNoPagados = document.getElementById('clientesNoPagadosPorMes').getContext('2d');
+    const clientesNoPagadosChart = new Chart(ctxNoPagados, {
+        type: 'bar',
+        data: {
+            labels: {{ meses_no_pagados|safe }},
+            datasets: [{
+                label: 'Total de Clientes No Pagados',
+                data: {{ total_no_pagados|safe }},
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Gráfico de Costos de Ingredientes por Mes
+    const ctxCostos = document.getElementById('costosIngredientes').getContext('2d');
+    const costosChart = new Chart(ctxCostos, {
+        type: 'bar',
+        data: {
+            labels: {{ meses_costos|safe }},
+            datasets: [{
+                label: 'Total Costos de Ingredientes',
+                data: {{ total_costos|safe }},
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Gráfico de Cantidad de Libras Compradas por Mes
+    const ctxLibras = document.getElementById('librasCompradas').getContext('2d');
+    const librasChart = new Chart(ctxLibras, {
+        type: 'bar',
+        data: {
+            labels: {{ meses_costos|safe }},
+            datasets: [{
+                label: 'Cantidad de Libras Compradas',
+                data: {{ total_libras_compradas|safe }},
+                backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                borderColor: 'rgba(255, 159, 64, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

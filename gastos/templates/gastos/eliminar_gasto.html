@@ -1,0 +1,14 @@
+<!-- gastos/templates/gastos/eliminar_gasto.html -->
+{% extends "admin.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Eliminar Gasto</h2>
+    <p>¿Estás seguro de que deseas eliminar el gasto "{{ gasto.nombre }}" con un costo de USD {{ gasto.costo }}?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a href="{% url 'gastos:ver_gastos' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

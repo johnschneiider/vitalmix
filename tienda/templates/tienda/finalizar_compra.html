@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Finalizar Compra</h1>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <h4>Resumen de tu compra</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in carrito_items %}
+                    <tr>
+                        <td>{{ item.producto.nombre }}</td>
+                        <td>{{ item.cantidad }}</td>
+                        <td>${{ item.producto.precio }}</td>
+                        <td>${{ item.total_producto }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <hr>
+            <div class="text-right">
+                <h4>Total de la Compra: ${{ total_carrito }}</h4>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <h4>Información de Facturación</h4>
+            <form method="POST" action="{% url 'tienda:procesar_compra' %}">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección de Envío</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="metodo_pago">Método de Pago</label>
+                    <select class="form-control" id="metodo_pago" name="metodo_pago" required>
+                        <option value="tarjeta">Tarjeta de Crédito</option>
+                        <option value="efectivo">Efectivo</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

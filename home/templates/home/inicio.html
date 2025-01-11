@@ -1,0 +1,898 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="slider">
+    <div class="hero-slider">
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('{% static 'img/slider2.jpg' %}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>Disfruta <span>En Pareja</span> Los Beneficios De La <span>Salud</span></h1>
+                            <div class="button">
+                                <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                                <a href="#" class="btn primary">Ver Plan Suscripción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+        
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('{% static 'img/slider.jpg' %}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            
+                            <h1>Tu Aliado <span>Saludable</span> Para Cumplir Tus <span>Metas</span></h1>
+                            <p></p>
+                            <div class="button">
+                                <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                                <a href="#" class="btn primary">Ver Plan Suscripción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+        
+        <!-- Start Single Slider -->
+        <div class="single-slider" style="background-image:url('{% static 'img/slider3.jpg' %}')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text">
+                            <h1>Un Excelente Componente Para Tu <span>Preentreno</span></h1>
+                            
+                            <div class="button">
+                                <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                                <a href="#" class="btn primary">Ver Plan Suscripción</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slider -->
+    </div>
+</section>
+
+<!--/ End Slider Area -->
+
+<!-- Start Schedule Area -->
+<section class="schedule">
+    <div class="container">
+        <div class="schedule-inner">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 ">
+                    <!-- single-schedule -->
+                    <div class="single-schedule first">
+                        <div class="inner">
+                            <div class="icon">
+                                <i class="fa fa-ambulance"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Beneficios de los batidos verdes</span>
+                                <h4>Beneficios para tu Salud</h4>
+                                <p>
+                                    Los batidos verdes desintoxican, mejoran la digestión y aumentan la energía de forma natural.
+                                </p>
+                                <a href="#">Conoce los Beneficios<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <!-- single-schedule -->
+                    <div class="single-schedule middle">
+                        <div class="inner">
+                            <div class="icon">
+                                <i class="icofont-prescription"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Menú de Batidos</span>
+                                <h4>Variedad de Sabores</h4>
+                                <p>Combinaciones con pepino, apio, piña o manzana verde.</p>
+                                <a href="#">Elige tu Favorito<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-12">
+                    <!-- single-schedule -->
+                    <div class="single-schedule last">
+                        <div class="inner">
+                            <div class="icon">
+                                <i class="icofont-ui-clock"></i>
+                            </div>
+                            <div class="single-content">
+                                <span>Horarios y Envíos</span>
+                                <h4>Horarios y Cobertura</h4>
+                                <ul class="time-sidual">
+                                    <li class="day">Lunea a Viernes <span>8.00-20.00</span></li>
+                                    <li class="day">Sabados <span>9.00-18.30</span></li>
+                                    <li class="day">Domingos <span>9.00-15.00</span></li>
+                                </ul>
+                                <a href="#">Consulta los Horarios<i class="fa fa-long-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/End Start schedule Area -->
+
+<!--inicia la cinta de iconos -->
+<div class="cinta">
+    <div class="iconos">
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+        <!-- Duplicar los iconos para crear la ilusión de infinito -->
+        <i class="fas fa-apple-alt"></i>
+        <i class="fas fa-lemon"></i>
+        <i class="fas fa-carrot"></i>
+        <i class="fas fa-pepper-hot"></i>
+        <i class="fas fa-seedling"></i>
+        <i class="fas fa-leaf"></i>
+    </div>
+</div>
+<!--finaliza la cinta de iconos -->
+
+<!-- Start Feautes -->
+<section class="Feautes section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Acepta el Reto Vitalmix de 21 días! </h2>
+                    <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>Recarga tu cuerpo con energía natural y siembra hábitos que transformarán tu vida.</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features">
+                    <div class="signle-icon">
+                        <i class="icofont icofont-cocktail"></i>
+                    </div>
+                    <h3>Un Coctel de Sabor</h3>
+                    <p>Los batidos verdes, al incluir hojas como espinaca y frutas como manzana, son ricos en fibra, lo que mejora la digestión y previene el estreñimiento.</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features">
+                    <div class="signle-icon">
+                        <i class="icofont icofont-apple"></i>
+                    </div>
+                    <h3>Salud y Bienestar</h3>
+                    <p>Consumir un batido verde en la mañana ayuda a desintoxicar el cuerpo después de dormir, aporta vitaminas esenciales y mejora tu energía para todo el día.</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+            <div class="col-lg-4 col-12">
+                <!-- Start Single features -->
+                <div class="single-features last">
+                    <div class="signle-icon">
+                        <i class="icofont icofont-water-drop"></i>
+                    </div>
+                    <h3>Hidrata y nutre tu piel</h3>
+                    <p>Los ingredientes como el pepino y el apio contienen altos niveles de agua y antioxidantes que favorecen una piel hidratada, radiante y libre de toxinas.</p>
+                </div>
+                <!-- End Single features -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Feautes -->
+
+<!-- Start Fun-facts -->
+<div id="fun-facts" class="quitar fun-facts section overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont icofont-smile"></i>
+                    <div class="content">
+                        <span class="counter">152</span>
+                        <p>Clientes Felices</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont icofont-calendar"></i>
+                    <div class="content">
+                        <span class="counter">21</span>
+                        <p>Días de Reto Completados</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont icofont-cocktail"></i>
+                    <div class="content">
+                        <span class="counter">1379</span>
+                        <p>Batidos Verdes Vendidos</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Fun -->
+                <div class="single-fun">
+                    <i class="icofont icofont-leaf"></i>
+                    <div class="content">
+                        <span class="counter">9</span>
+                        <p>Hojas y frutas frescas utilizadas</p>
+                    </div>
+                </div>
+                <!-- End Single Fun -->
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ End Fun-facts -->
+
+<!-- Start Why choose -->
+<section class="why-choose section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Ofrecemos Servicios para Mejorar tu Bienestar</h2>
+                    <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                    <img src="{% static 'img/section-img.png' %}" alt="Imagen de salud">
+                    <p>Descubre cómo los batidos verdes pueden transformar tu salud con ingredientes frescos y naturales.</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <!-- Start Choose Left -->
+                <div class="choose-left">
+                    <h3>¿Quiénes Somos?</h3>
+                    <p>En Vitalmix, nos especializamos en ofrecer batidos verdes elaborados con frutas y verduras frescas, ideales para desintoxicar tu cuerpo y llenarte de energía.</p>
+                    <p>Nuestro objetivo es ayudarte a alcanzar un estilo de vida saludable mientras disfrutas de deliciosos sabores.</p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list">
+                                <li><i class="fa fa-caret-right"></i>Batidos ricos en vitaminas y minerales.</li>
+                                <li><i class="fa fa-caret-right"></i>Ingredientes 100% naturales.</li>
+                                <li><i class="fa fa-caret-right"></i>Perfectos para cada día.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="list">
+                                <li><i class="fa fa-caret-right"></i>Apoyo en tus retos de salud.</li>
+                                <li><i class="fa fa-caret-right"></i>Fácil de integrar en tu rutina diaria.</li>
+                                <li><i class="fa fa-caret-right"></i>Resultados visibles en 21 días.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Choose Left -->
+            </div>
+            <div class="col-lg-6 col-12">
+                <!-- Start Choose Rights -->
+                <div class="choose-right">
+                    <div class="video-image">
+                        <!-- Video Animation -->
+                        <div class="promo-video">
+                            <div class="waves-block">
+                                <div class="waves wave-1"></div>
+                                <div class="waves wave-2"></div>
+                                <div class="waves wave-3"></div>
+                            </div>
+                        </div>
+                        <!--/ End Video Animation -->
+                        <a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+                    </div>
+                </div>
+                <!-- End Choose Rights -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--/ End Why choose -->
+
+<!-- Start Call to action -->
+<section class="call-action overlay" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="content">
+                    <h2>¿Listo para un reto de salud? ¡Comienza tu reto Vitalmix de 21 días hoy!</h2>
+                    <p>Con nuestros batidos verdes, podrás mejorar tu bienestar, aumentar tu energía y sentirte mejor cada día. ¡Haz el cambio hacia un estilo de vida más saludable con Vitalmix!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--/ End Call to action -->
+
+<!-- Start portfolio -->
+<section class="portfolio section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Mantén una alimentación saludable con Vitalmix</h2>
+                    <a href="{% url 'pedidos:registrar_pedido' %}" class="btn animated-button" style="color: aliceblue;">Hacer Pedido</a>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>Descubre cómo nuestros batidos verdes pueden ayudarte a mejorar tu salud y energía de forma natural. ¡Un viaje hacia el bienestar empieza con un batido verde al día!</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="owl-carousel portfolio-slider">
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf1.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf2.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf3.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf4.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf1.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf2.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf3.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                    <div class="single-pf">
+                        <img src="{% static 'img/pf4.jpg' %}" alt="#">
+                        <a href="portfolio-details.html" class="btn">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+
+<!--/ End portfolio -->
+
+<!-- Start service -->
+<section class="services section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Ofrecemos Servicios Para Mejorar Tu Salud con Vitalmix</h2>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>En Vitalmix, ofrecemos una variedad de servicios pensados para ayudarte a mantener una salud óptima a través de nuestros batidos verdes. ¡Mejora tu bienestar y energía de forma natural!</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-prescription"></i>
+                    <h4><a href="service-details.html">Batidos Detox</a></h4>
+                    <p>Elimina toxinas de tu cuerpo y mejora tu digestión con nuestros batidos detox de ingredientes frescos y naturales.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-tooth"></i>
+                    <h4><a href="service-details.html">Energía Natural</a></h4>
+                    <p>Recarga tu energía de forma saludable con batidos verdes llenos de vitaminas y minerales esenciales.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-heart-alt"></i>
+                    <h4><a href="service-details.html">Fortalecimiento Inmunológico</a></h4>
+                    <p>Mejora tu sistema inmunológico y previene enfermedades con nuestros batidos ricos en antioxidantes.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-listening"></i>
+                    <h4><a href="service-details.html">Asesoría Nutricional</a></h4>
+                    <p>Te ofrecemos asesoría personalizada sobre cómo incorporar nuestros batidos verdes en tu dieta diaria.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-eye-alt"></i>
+                    <h4><a href="service-details.html">Batidos para Control de Peso</a></h4>
+                    <p>Acelera tu metabolismo y controla tu peso con batidos diseñados para ayudarte a alcanzar tus objetivos.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="icofont icofont-blood"></i>
+                    <h4><a href="service-details.html">Mejora de Digestión</a></h4>
+                    <p>Mejora tu digestión y aumenta tu bienestar general con batidos verdes que facilitan la absorción de nutrientes.</p>	
+                </div>
+                <!-- End Single Service -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--/ End service -->
+
+<!-- Pricing Table -->
+<section class="pricing-table section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Te ofrecemos los mejores batidos verdes a precios razonables</h2>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>En Vialmix, nos especializamos en la venta de batidos verdes frescos y saludables para ayudarte a llevar un estilo de vida más saludable. ¡Pruébalos hoy mismo!</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Single Table -->
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="single-table">
+                    <!-- Table Head -->
+                    <div class="table-head">
+                        <div class="icon">
+                            <i class="icofont icofont-lemon"></i>
+                        </div>
+                        <h4 class="title">Batido Verde Energizante</h4>
+                        <div class="price">
+                            <p class="amount">$40.000<span>/1 Paquete semanal</span></p>
+                        </div>	
+                    </div>
+                    <!-- Table List -->
+                    <ul class="table-list">
+                        <li><i class="icofont icofont-ui-check"></i>Batido de pepino, apio, manzana verde y piña</li>
+                        <li><i class="icofont icofont-ui-check"></i>Rico en vitaminas y minerales</li>
+                        <li class="cross"><i class="icofont icofont-ui-close"></i>Sin ingredientes artificiales</li>
+                        <li class="cross"><i class="icofont icofont-ui-close"></i>No contiene azúcares añadidos</li>
+                        <li class="cross"><i class="icofont icofont-ui-close"></i>Solo disponible por encargo</li>
+                    </ul>
+                    <div class="table-bottom">
+                        <a class="btn" href="#">Ordenar Ahora</a>
+                    </div>
+                    <!-- Table Bottom -->
+                </div>
+            </div>
+            <!-- End Single Table-->
+            <!-- Single Table -->
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="single-table">
+                    <!-- Table Head -->
+                    <div class="table-head">
+                        <div class="icon">
+                            <i class="icofont icofont-leaf"></i>
+                        </div>
+                        <h4 class="title">Paquete Mixto</h4>
+                        <div class="price">
+                            <p class="amount">$49.000<span>/ 1 Paquete Semanal</span></p>
+                        </div>	
+                    </div>
+                    <!-- Table List -->
+                    <ul class="table-list">
+                        <li><i class="icofont icofont-ui-check"></i>Ingredientes naturales: pepino, apio y perejil</li>
+                        <li><i class="icofont icofont-ui-check"></i>Desintoxica tu cuerpo</li>
+                        <li><i class="icofont icofont-ui-check"></i>Fortalece el sistema inmunológico</li>
+                        <li class="cross"><i class="icofont icofont-ui-close"></i>Sin endulzantes artificiales</li>
+                        <li class="cross"><i class="icofont icofont-ui-close"></i>Disponible solo en porciones grandes</li>
+                    </ul>
+                    <div class="table-bottom">
+                        <a class="btn" href="#">Ordenar Ahora</a>
+                    </div>
+                    <!-- Table Bottom -->
+                </div>
+            </div>
+            <!-- End Single Table-->
+            <!-- Single Table -->
+            <div class="col-lg-4 col-md-12 col-12">
+                <div class="single-table">
+                    <!-- Table Head -->
+                    <div class="table-head">
+                        <div class="icon">
+                            <i class="icofont icofont-heart-beat"></i>
+                        </div>
+                        <h4 class="title">Elige tu Combinación</h4>
+                        <div class="price">
+                            <p class="amount">$58.000<span>/ 1 Paquete Semanal</span></p>
+                        </div>	
+                    </div>
+                    <!-- Table List -->
+                    <ul class="table-list">
+                        <li><i class="icofont icofont-ui-check"></i>Mezcla de pepino, manzana verde y piña</li>
+                        <li><i class="icofont icofont-ui-check"></i>Aporta frescura y vitalidad</li>
+                        <li><i class="icofont icofont-ui-check"></i>Ayuda a la digestión y reduce el estrés</li>
+                        <li><i class="icofont icofont-ui-check"></i>Completamente natural</li>
+                        <li><i class="icofont icofont-ui-check"></i>Ideal para los días calurosos</li>
+                    </ul>
+                    <div class="table-bottom">
+                        <a class="btn" href="#">Ordenar Ahora</a>
+                    </div>
+                    <!-- Table Bottom -->
+                </div>
+            </div>
+            <!-- End Single Table-->
+        </div>	
+    </div>	
+</section>
+
+<!--/ End Pricing Table -->
+
+
+
+<!-- Start Blog Area -->
+<section class="blog section" id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Mantente al día con nuestras últimas noticias sobre batidos verdes.</h2>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>En Vitalmix, estamos comprometidos con ofrecerte los mejores batidos verdes para tu salud. Descubre las últimas novedades y consejos sobre alimentación saludable.</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <img src="{% static 'img/blog1.jpg' %}" alt="#">
+                    </div>
+                    <div class="news-body">
+                        <div class="date">22 Ago, 2024</div>
+                        <h2><a href="blog-single.html">Anunciamos nuestro nuevo batido verde detox.</a></h2>
+                        <p class="text">Conoce nuestra nueva receta de batido verde detox, hecha con ingredientes frescos y saludables para purificar tu cuerpo.</p>
+                    </div>
+                </div>
+                <!-- End Single Blog -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <img src="{% static 'img/blog2.jpg' %}" alt="#">
+                    </div>
+                    <div class="news-body">
+                        <div class="date">15 Jul, 2024</div>
+                        <h2><a href="blog-single.html">Cinco beneficios de los batidos verdes para tu salud.</a></h2>
+                        <p class="text">Los batidos verdes son una excelente forma de incorporar más vegetales en tu dieta. Descubre los principales beneficios que ofrecen para tu bienestar.</p>
+                    </div>
+                </div>
+                <!-- End Single Blog -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+                <!-- Single Blog -->
+                <div class="single-news">
+                    <div class="news-head">
+                        <img src="{% static 'img/blog3.jpg' %}" alt="#">
+                    </div>
+                    <div class="news-body">
+                        <div class="date">05 Ene, 2024</div>
+                        <h2><a href="blog-single.html">Ofrecemos soluciones empresariales saludables.</a></h2>
+                        <p class="text">En Vitalmix, estamos trabajando para llevar nuestras opciones de batidos verdes a más personas, mejorando la salud y bienestar de todos.</p>
+                    </div>
+                </div>
+                <!-- End Single Blog -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Blog Area -->
+
+<!-- Start clients -->
+<div class="clients overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="owl-carousel clients-slider">
+                    <div class="single-clients">
+                        <img src="{% static 'img/client1.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client2.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client3.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client4.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client5.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client1.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client2.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client3.png' %}" alt="#">
+                    </div>
+                    <div class="single-clients">
+                        <img src="{% static 'img/client4.png' %}" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/Ens clients -->
+
+<!-- Start Appointment -->
+<section class="appointment" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2>Estamos Siempre Listos para Ayudarte. Reserva una Cita</h2>
+                    <img src="{% static 'img/section-img.png' %}" alt="#">
+                    <p>En VitalMix, nos especializamos en ofrecer batidos verdes frescos y saludables. Reserva una cita para descubrir cómo podemos ayudarte a mejorar tu bienestar con nuestros deliciosos batidos.</p>
+                    <div class="button">
+                        <a href="{% url 'pedidos:registrar_pedido' %}" class="btn" style="background-color:#33b262; color: aliceblue;" >Hacer Pedido</a>
+                        <a href="#" class="btn primary" style="background-color:#343547; color: aliceblue; ">Ver Plan Suscripción</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-12">
+                <form class="form" action="#">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <input name="name" type="text" placeholder="Nombre">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <input name="email" type="email" placeholder="Correo Electrónico">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <input name="phone" type="text" placeholder="Teléfono">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Departamento</span>
+                                    <ul class="list">
+                                        <li data-value="1" class="option selected">Departamento</li>
+                                        <li data-value="2" class="option">Batidos Verdes</li>
+                                        <li data-value="3" class="option">Suplementos Nutricionales</li>
+                                        <li data-value="4" class="option">Asesoría Nutricional</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <div class="nice-select form-control wide" tabindex="0"><span class="current">Vendedor</span>
+                                    <ul class="list">
+                                        <li data-value="1" class="option selected">Vendedor</li>
+                                        <li data-value="2" class="option">Carlos Gómez</li>
+                                        <li data-value="3" class="option">Ana Martínez</li>
+                                        <li data-value="4" class="option">Luis Pérez</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <div class="form-group">
+                                <input type="text" placeholder="Fecha" id="datepicker">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Escribe tu mensaje aquí....."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-md-4 col-12">
+                            <div class="form-group">
+                                <div class="button">
+                                    <button type="submit" class="btn">Reserva una Cita</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 col-12">
+                            <p>(Te confirmaremos por mensaje de texto)</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="appointment-image">
+                    <img src="{% static 'img/contact-img.png' %}" alt="#">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Start Newsletter Area -->
+<section class="newsletter section" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <!-- Start Newsletter Text -->
+                <div class="subscribe-text">
+                    <h6>Suscríbete a nuestro boletín</h6>
+                    <p>Recibe las últimas novedades sobre nuestros batidos verdes, promociones especiales y consejos de bienestar. ¡Únete a la familia VitalMix!</p>
+                </div>
+                <!-- End Newsletter Text -->
+            </div>
+            <div class="col-lg-6 col-12">
+                <!-- Start Newsletter Form -->
+                <div class="subscribe-form">
+                    <form action="#" method="post" class="newsletter-inner">
+                        <input name="EMAIL" placeholder="Tu dirección de correo electrónico" class="common-input" onfocus="this.placeholder = ''"
+                            onblur="this.placeholder = 'Tu dirección de correo electrónico'" required="" type="email">
+                        <button class="btn">Suscribirse</button>
+                    </form>
+                </div>
+                <!-- End Newsletter Form -->
+            </div>
+        </div>
+    </div>
+</section>
+<div class="firework"></div>
+<div class="firework"></div>
+<div class="firework"></div>
+
+<div class="barra-inferior">
+    <div class="contenedor-deslizable">
+      <div id="slider" class="area-deslizable">
+        <div id="fireworks-container"></div>
+        <span class="texto-deslizable">Hacer pedido</span>
+        <a id="redirect-link" href="{% url 'pedidos:registrar_pedido' %}"></a>
+        <div class="manejador-deslizable"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+
+{% endblock %}

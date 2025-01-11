@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="my-4">Lista de Deseos</h1>
+
+        {% if lista_deseos %}
+            <div class="row">
+                {% for item in lista_deseos %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{{ item.producto.imagenes.first.imagen.url }}" class="card-img-top" alt="{{ item.producto.nombre }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ item.producto.nombre }}</h5>
+                                <p class="card-text">{{ item.producto.descripcion }}</p>
+                                <p class="card-text">Precio: ${{ item.producto.precio }}</p>
+                                <a href="{% url 'tienda:agregar_al_carrito' item.producto.id %}" class="btn btn-success">Agregar al carrito</a>
+                                <a href="{% url 'tienda:eliminar_de_deseos' item.id %}" class="btn btn-danger">Eliminar</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No tienes productos en tu lista de deseos.</p>
+        {% endif %}
+    </div>
+{% endblock %}

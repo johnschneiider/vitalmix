@@ -1,0 +1,100 @@
+<!-- gastos/templates/gastos/registrar_gasto.html -->
+{% extends "admin.html" %}
+
+{% block content %}
+<style>
+    /* General container for the form */
+.form-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+/* Form title */
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #00662e; /* Primary color */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form group style */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Input fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+/* Input fields focus effect */
+.form-group input:focus {
+    border-color: #00662e;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 102, 46, 0.4);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #00662e;
+    border-color: #00662e;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #004c20;
+    border-color: #004c20;
+}
+
+/* Center the container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+</style>
+
+<div class="container mt-5" >
+    <div class="form-container">
+        <h2>Registrar Gasto</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre">Nombre del Gasto:</label>
+                <input type="text" class="form-control" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="costo">Costo (COP):</label>
+                <input type="number" step="0.01" class="form-control" name="costo" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Gasto</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

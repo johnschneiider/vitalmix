@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Agregar Nuevo Producto</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2>Producto</h2>
+    {{ producto_form.as_p }}
+
+    <h2>Imágenes</h2>
+    {{ imagen_form.as_p }}
+
+    <button type="submit">Agregar Producto</button>
+</form>
+
+<a href="{% url 'tienda:tienda' %}">Volver a la tienda</a>
+
+
+{% endblock %}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+    <title>VitalMix - {{ title|default:"Inicio" }}</title>
+
+
+    {% load static %}
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    
+    <!-- Archivos CSS locales -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icofont.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- Bootstrap CDN (puedes dejarlo como está si quieres usar el CDN) -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+
+
+
+<body>
+		<!-- Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="loader-outter"></div>
+                <div class="loader-inner"></div>
+
+                <div class="indicator"> 
+                    <svg width="16px" height="12px">
+                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader -->
+
+		<!-- Get Pro Button -->
+		<ul class="pro-features">
+			<a class="get-pro" href="#">Get Pro</a>
+			<li class="big-title">Pro Version Available on Themeforest</li>
+			<li class="title">Pro Version Features</li>
+			<li>2+ premade home pages</li>
+			<li>20+ html pages</li>
+			<li>Color Plate With 12+ Colors</li>
+			<li>Sticky Header / Sticky Filters</li>
+			<li>Working Contact Form With Google Map</li>
+			<div class="button">
+				<a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" class="btn">Pro Version Demo</a>
+				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
+			</div>
+		</ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="{% url 'inicio' %}">VitalMix</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <!-- Tienda Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarTienda" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tienda
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarTienda">
+                        <a class="dropdown-item" href="{% url 'tienda:tienda' %}">Ver Tienda</a>
+                        <a class="dropdown-item" href="{% url 'tienda:agregar_producto' %}">Agregar Producto</a>
+                    </div>
+                </li>
+                <!-- Pedidos Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarPedidos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Pedidos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarPedidos">
+                        <a class="dropdown-item" href="{% url 'pedidos:registrar_pedido' %}">Registrar Pedido</a>
+                        <a class="dropdown-item" href="{% url 'pedidos:listar_pedidos' %}">Listar Pedidos</a>
+                        <a class="dropdown-item" href="{% url 'pedidos:mis_ventas' %}">Mis Ventas</a>
+                    </div>
+                </li>
+
+                <!-- Compras Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarCompras" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Compras
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarCompras">
+                        <a class="dropdown-item" href="{% url 'compras:registrar_compra' %}">Registrar Compra</a>
+                        <a class="dropdown-item" href="{% url 'compras:ver_compras' %}">Lista de Compras</a>
+                    </div>
+                </li>
+
+                <!-- Gastos Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarGastos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gastos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarGastos">
+                        <a class="dropdown-item" href="{% url 'gastos:registrar_gasto' %}">Registrar Gasto</a>
+                        <a class="dropdown-item" href="{% url 'gastos:ver_gastos' %}">Ver Gastos</a>
+                    </div>
+                </li>
+
+                <!-- Otras opciones -->
+                <li class="nav-item"><a class="nav-link" href="{% url 'calculadora:calcular_ingredientes' %}">Calculadora</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'reportes:mostrar_reportes' %}">Reportes</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'autenticacion:inicio_sesion' %}">Inicio Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+
+    <!-- Main content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Acerca de VitalMix</h5>
+                    <p>VitalMix es tu aliado en nutrición saludable. Ofrecemos los mejores productos frescos y de calidad para ayudarte a mantener un estilo de vida saludable.</p>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                        <li><a href="{% url 'pedidos:registrar_pedido' %}">Registrar Pedido</a></li>
+                        <li><a href="{% url 'calculadora:calcular_ingredientes' %}">Calculadora de Ingredientes</a></li>
+                        <li><a href="{% url 'reportes:mostrar_reportes' %}">Reportes</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-phone"></i> +57 317 144 9393</p>
+                    <p><i class="fas fa-envelope"></i> info@vitalmix.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Cali, Colombia</p>
+                </div>
+            </div>
+
+            <hr class="bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 VitalMix. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<!-- jQuery Min JS -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<!-- jQuery Migrate JS -->
+<script src="{% static 'js/jquery-migrate-3.0.0.js' %}"></script>
+<!-- jQuery UI JS -->
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<!-- Easing JS -->
+<script src="{% static 'js/easing.js' %}"></script>
+<!-- Color JS -->
+<script src="{% static 'js/colors.js' %}"></script>
+<!-- Popper JS -->
+<script src="{% static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+<!-- jQuery Nav JS -->
+<script src="{% static 'js/jquery.nav.js' %}"></script>
+<!-- Slicknav JS -->
+<script src="{% static 'js/slicknav.min.js' %}"></script>
+<!-- ScrollUp JS -->
+<script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+<!-- Niceselect JS -->
+<script src="{% static 'js/niceselect.js' %}"></script>
+<!-- Tilt jQuery JS -->
+<script src="{% static 'js/tilt.jquery.min.js' %}"></script>
+<!-- Owl Carousel JS -->
+<script src="{% static 'js/owl-carousel.js' %}"></script>
+<!-- Counterup JS -->
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<!-- Steller JS -->
+<script src="{% static 'js/steller.js' %}"></script>
+<!-- Wow JS -->
+<script src="{% static 'js/wow.min.js' %}"></script>
+<!-- Magnific Popup JS -->
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<!-- Counter Up CDN JS -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

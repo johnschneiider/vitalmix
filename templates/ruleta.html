@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta</title>
+    <link rel="stylesheet" href="{% static 'css/roulette.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center; color: #1b3380;">¡Prueba tu suerte!</h1>
+    <div class="roulette">
+        <div class="spinner"></div>
+        <div class="shadow"></div>
+        <div class="markers">
+            <div class="triangle"></div>
+        </div>
+        <div class="button">
+            <span>Girar</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/roulette.js' %}"></script>
+</body>
+</html>
