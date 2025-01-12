@@ -24,16 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
         reiniciarRuleta(); // Reinicia la posición inicial de la ruleta
 
         const premios = [
-            { texto: 'Compra gratis', angulo: 0 },            // Primer segmento
+            { texto: 'Bono de 10.000 en productos', angulo: 0 },            // Primer segmento
             { texto: 'Gratis para un amigo', angulo: 30 },    // Segundo segmento
-            { texto: 'Casi ganas!', angulo: 60 },             // Tercer segmento
+            { texto: '30% descuento', angulo: 60 },             // Tercer segmento
             { texto: 'Sigue intentando', angulo: 90 },        // Cuarto segmento
             { texto: '20% descuento', angulo: 120 },          // Quinto segmento
-            { texto: 'Un mes gratis para ti', angulo: 150 },  // Sexto segmento
-            { texto: 'Compra gratis', angulo: 180 },          // Séptimo segmento
-            { texto: 'Sigue intentando', angulo: 210 },       // Octavo segmento
+            { texto: 'Bono de 40.000 e productos', angulo: 150 },  // Sexto segmento
+            { texto: '2 por precio de 1', angulo: 180 },          // Séptimo segmento
+            { texto: '20% descuento', angulo: 210 },       // Octavo segmento
             { texto: '2 por precio de 1', angulo: 240 },      // Noveno segmento
-            { texto: 'Ups! sigue intentando', angulo: 270 },  // Décimo segmento
+            { texto: 'Sigue intentando', angulo: 270 },  // Décimo segmento
             { texto: '10% descuento', angulo: 300 },          // Undécimo segmento
             { texto: 'Sigue intentando', angulo: 330 }        // Duodécimo segmento
         ];
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resultado.textContent = `¡Tu premio es: ${premioSeleccionado.texto}!`;
             resultado.style.display = 'block';
             cerrarModal.style.display = 'inline-block';
-            btnGirar.disabled = false; // Reactivar el botón después del giro
+            btnGirar.style.display = 'none'; // Reactivar el botón después del giro
         }, 12000);
     });
 

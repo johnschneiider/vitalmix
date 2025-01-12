@@ -1,0 +1,37 @@
+PASOS PARA SUBIR LOS CAMBIOS A GITHUB
+# 1️⃣ Ir a la carpeta del proyecto
+cd ruta/a/tu/proyecto
+
+# 2️⃣ Verificar el estado de los cambios
+git status
+
+# 3️⃣ Agregar todos los archivos modificados al área de preparación
+git add .
+
+# 4️⃣ Hacer commit con un mensaje descriptivo
+git commit -m "Descripción breve de los cambios"
+
+# 5️⃣ Asegurarse de estar en la rama main
+git branch
+git checkout main
+
+# 6️⃣ Subir los cambios al repositorio de GitHub
+git push origin main
+
+
+
+
+
+entro a la vps
+ssh root@92.113.39.100
+pongo contraseña
+pXb@Q+BXAFS4Ldt
+
+
+cd ~/vitalmix
+git pull origin main
+source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py collectstatic --noinput
+systemctl restart vitalmix

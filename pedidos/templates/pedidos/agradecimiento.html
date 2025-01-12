@@ -8,12 +8,7 @@
         <p>Un asesor se contactará contigo el día de la entrega.</p>
         <a href="{% url 'inicio' %}" class="btn btn-primary mt-4" style="background-color: #00662e; color: #f8f9fa; border-color: #00662e;">Volver al Inicio</a>
     </div>
-    <h1>¡Gracias por tu pedido, {{ nombre_cliente }}!</h1>
-        {% if pedido.resultado_ruleta %}
-            <p>Tu premio es: {{ pedido.resultado_ruleta.resultado }}</p>
-        {% else %}
-            <p>No se realizó un giro de la ruleta.</p>
-        {% endif %}
+
 
     <br><br><br><br><br>
 </div>
